@@ -1,11 +1,13 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export const MovieDetails = () => {
 	const [movie, setMovie] = useState([]);
 	const params = useParams();
   const ImgUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+  usePageTitle(movie.title);
 
 	useEffect(() => {
 		async function fetchMovie(){
