@@ -41,7 +41,7 @@ export const Header = () => {
               className="h-10"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-xl xl:text-2xl font-semibold whitespace-nowrap dark:text-white">
             MovieVerse
             </span>
           </Link>
