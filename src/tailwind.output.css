@@ -829,6 +829,9 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
   .max-w-36 {
     max-width: calc(var(--spacing) * 36);
   }
@@ -837,9 +840,6 @@
   }
   .max-w-76 {
     max-width: calc(var(--spacing) * 76);
-  }
-  .max-w-7xl {
-    max-width: var(--container-7xl);
   }
   .max-w-86 {
     max-width: calc(var(--spacing) * 86);
@@ -931,6 +931,9 @@
   }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
