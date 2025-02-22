@@ -724,9 +724,6 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
-  .h-9\/10 {
-    height: calc(9/10 * 100%);
-  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -832,9 +829,6 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
-  .max-w-7xl {
-    max-width: var(--container-7xl);
-  }
   .max-w-36 {
     max-width: calc(var(--spacing) * 36);
   }
@@ -843,6 +837,9 @@
   }
   .max-w-76 {
     max-width: calc(var(--spacing) * 76);
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
   }
   .max-w-86 {
     max-width: calc(var(--spacing) * 86);
@@ -1304,16 +1301,6 @@
       outline-style: none;
     }
   }
-  .max-2xl\:mt-10 {
-    @media (width < 96rem) {
-      margin-top: calc(var(--spacing) * 10);
-    }
-  }
-  .max-xl\:mx-auto {
-    @media (width < 80rem) {
-      margin-inline: auto;
-    }
-  }
   .max-xl\:mt-10 {
     @media (width < 80rem) {
       margin-top: calc(var(--spacing) * 10);
@@ -1324,82 +1311,15 @@
       justify-content: center;
     }
   }
-  .max-xl\:justify-evenly {
-    @media (width < 80rem) {
-      justify-content: space-evenly;
-    }
-  }
-  .max-lg\:mt-5 {
-    @media (width < 64rem) {
-      margin-top: calc(var(--spacing) * 5);
-    }
-  }
-  .max-lg\:mt-10 {
-    @media (width < 64rem) {
-      margin-top: calc(var(--spacing) * 10);
-    }
-  }
-  .max-lg\:ml-50 {
-    @media (width < 64rem) {
-      margin-left: calc(var(--spacing) * 50);
-    }
-  }
-  .max-lg\:ml-52 {
-    @media (width < 64rem) {
-      margin-left: calc(var(--spacing) * 52);
-    }
-  }
-  .max-lg\:justify-evenly {
-    @media (width < 64rem) {
-      justify-content: space-evenly;
-    }
-  }
   .max-lg\:text-2xl {
     @media (width < 64rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
-  .max-lg\:text-xl {
-    @media (width < 64rem) {
-      font-size: var(--text-xl);
-      line-height: var(--tw-leading, var(--text-xl--line-height));
-    }
-  }
-  .max-md\:justify-center {
-    @media (width < 48rem) {
-      justify-content: center;
-    }
-  }
-  .max-md\:justify-evenly {
-    @media (width < 48rem) {
-      justify-content: space-evenly;
-    }
-  }
-  .max-md\:text-xl {
-    @media (width < 48rem) {
-      font-size: var(--text-xl);
-      line-height: var(--tw-leading, var(--text-xl--line-height));
-    }
-  }
-  .max-sm\:justify-center {
-    @media (width < 40rem) {
-      justify-content: center;
-    }
-  }
   .sm\:mt-0 {
     @media (width >= 40rem) {
       margin-top: calc(var(--spacing) * 0);
-    }
-  }
-  .sm\:justify-center {
-    @media (width >= 40rem) {
-      justify-content: center;
-    }
-  }
-  .sm\:justify-evenly {
-    @media (width >= 40rem) {
-      justify-content: space-evenly;
     }
   }
   .sm\:text-center {
@@ -1525,24 +1445,15 @@
       text-align: left;
     }
   }
-  .xl\:ml-5 {
-    @media (width >= 80rem) {
-      margin-left: calc(var(--spacing) * 5);
-    }
-  }
-  .xl\:ml-20 {
-    @media (width >= 80rem) {
-      margin-left: calc(var(--spacing) * 20);
+  .lg\:text-2xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .xl\:ml-25 {
     @media (width >= 80rem) {
       margin-left: calc(var(--spacing) * 25);
-    }
-  }
-  .xl\:ml-52 {
-    @media (width >= 80rem) {
-      margin-left: calc(var(--spacing) * 52);
     }
   }
   .xl\:text-2xl {
@@ -1571,16 +1482,6 @@
   .dark\:border-gray-700 {
     &:where(.dark, .dark *) {
       border-color: var(--color-gray-700);
-    }
-  }
-  .dark\:border-slate-200 {
-    &:where(.dark, .dark *) {
-      border-color: var(--color-slate-200);
-    }
-  }
-  .dark\:border-slate-400 {
-    &:where(.dark, .dark *) {
-      border-color: var(--color-slate-400);
     }
   }
   .dark\:border-slate-500 {
@@ -1621,16 +1522,6 @@
   .dark\:text-gray-400 {
     &:where(.dark, .dark *) {
       color: var(--color-gray-400);
-    }
-  }
-  .dark\:text-slate-100 {
-    &:where(.dark, .dark *) {
-      color: var(--color-slate-100);
-    }
-  }
-  .dark\:text-slate-200 {
-    &:where(.dark, .dark *) {
-      color: var(--color-slate-200);
     }
   }
   .dark\:text-slate-300 {
