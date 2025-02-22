@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BackupImg from '../assets/backup.jpg'
 
 export const Card = ({movie}) => {
     const {id, title, overview, poster_path} = movie;
-    const imageUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
+    const imageUrl = poster_path? `https://image.tmdb.org/t/p/w500${poster_path}` : BackupImg;
 
     const truncateOverview = (text, limit) => {
         return text.length > limit ? text.substr(0, limit) + '...' : text;
