@@ -20,7 +20,7 @@ export const Card = ({movie}) => {
                 <Link to={`/movie/${id}`}>
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
                 </Link>
-                <p className="mb-3 text-base font-normal text-gray-700 dark:text-gray-400">{truncateOverview(overview, 200)}</p>
+                <p className="mt-4 text-sm font-normal text-gray-700 dark:text-gray-400">{truncateOverview(overview, 250)}</p>
             </div>
 
             {/* <div className='pl-5 pb-5'>
