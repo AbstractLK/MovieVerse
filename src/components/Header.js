@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
 
 export const Header = () => {
   const [hidden, setHidden] = useState(true);
@@ -9,24 +8,24 @@ export const Header = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if(darkMode)
-      document.documentElement.classList.add('dark');
-    else
-      document.documentElement.classList.remove('dark');
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, [darkMode]);
 
   const activeClass =
     "block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500";
-
   const inactiveClass =
     "block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const searchQuery = e.target.search.value;
-      e.target.reset();
-      return navigate(`search?q=${searchQuery}`);
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const searchQuery = e.target.search.value;
+    e.target.reset();
+    return navigate(`/search?q=${searchQuery}`);
+  };
 
   return (
     <div>
@@ -36,17 +35,17 @@ export const Header = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src={Logo}
-              className="h-10"
-              alt="Flowbite Logo"
-            />
+            <img src={Logo} className="h-10" alt="MovieVerse Logo" />
             <span className="self-center text-xl xl:text-2xl font-semibold whitespace-nowrap dark:text-white">
-            MovieVerse
+              MovieVerse
             </span>
           </Link>
           <div className="flex md:order-2">
-            <button onClick={() => setDarkMode(!darkMode)} className="hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 me-2">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              aria-label="Toggle dark mode"
+              className="hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 me-2"
+            >
               {darkMode ? (
                 <svg
                   className="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -59,7 +58,7 @@ export const Header = () => {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
+                    d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
                     clipRule="evenodd"
                   />
                 </svg>
