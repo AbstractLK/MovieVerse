@@ -199,7 +199,7 @@ export const Header = () => {
               </form>
             </div>
             <ul className="text-center flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+              <li onClick={() => setHidden(!hidden)}>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
@@ -210,7 +210,7 @@ export const Header = () => {
                   Now Playing
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setHidden(!hidden)}>
                 <NavLink
                   to="/movies/popular"
                   className={({ isActive }) =>
@@ -220,7 +220,7 @@ export const Header = () => {
                   Popular
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setHidden(!hidden)}>
                 <NavLink
                   to="/movies/top"
                   className={({ isActive }) =>
@@ -230,7 +230,7 @@ export const Header = () => {
                   Top Rated
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setHidden(!hidden)}>
                 <NavLink
                   to="/movies/upcoming"
                   className={({ isActive }) =>
