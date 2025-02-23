@@ -24,6 +24,7 @@ export const Header = () => {
     e.preventDefault();
     const searchQuery = e.target.search.value;
     e.target.reset();
+    setHidden(true);
     return navigate(`/search?q=${searchQuery}`);
   };
 

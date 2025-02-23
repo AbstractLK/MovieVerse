@@ -13,7 +13,7 @@ export const Search = ({apiPath}) => {
 
   return (
     <main>
-      <div className='max-w-6xl mx-auto pt-7'>
+      <div className='max-w-6xl mx-auto max-xl:ml-5 pt-7'>
         <p className='text-2xl font-semibold text-gray-800 dark:text-gray-200'>
           {movies.length === 0 ? `No results found for "${searchQuery}"` : `Results for "${searchQuery}"`}
         </p>

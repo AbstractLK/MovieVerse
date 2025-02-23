@@ -21,10 +21,10 @@ export const MovieDetails = () => {
   return (
     <main>
     	<section className='flex justify-around flex-wrap py-5 px-5 lg:px-10'>
-    		<div className="max-w-86">
+    		<div className="max-w-[350px]">
           <img src={ImgUrl} alt={movie.title} />
         </div>
-    		<div className="max-w-2xl text-slate-900 dark:text-slate-300">
+    		<div className="max-w-xl px-2 max-lg:mb-10 text-slate-900 dark:text-slate-300">
           <h1 className='text-3xl max-lg:text-2xl font-bold my-3 text-center lg:text-left max-xl:mt-10'>{movie.title}</h1>
           <p className='my-5'>{movie.overview}</p>
           {movie.genres && (

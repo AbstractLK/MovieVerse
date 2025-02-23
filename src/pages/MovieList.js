@@ -8,8 +8,8 @@ export const MovieList = ({apiPath, pageTitle}) => {
   usePageTitle(pageTitle);
 
   return (
-    <main>
-      <div className="max-w-6xl mx-auto xl:ml-25 py-7">
+    <main >
+      <div className="max-w-6xl mx-auto py-7 xl:ml-24">
         <div className="flex flex-wrap justify-start max-xl:justify-center">
           {movies.map((movie) => (
             <Card key={movie.id} movie={movie} />

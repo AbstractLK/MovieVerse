@@ -16,7 +16,7 @@ export const Card = ({movie}) => {
             <Link to={`/movie/${id}`}>
                 <img className="rounded-t-lg" src={imageUrl} alt="" />
             </Link>
-            <div className="p-5 h-65">
+            <div className="p-5 h-60">
                 <Link to={`/movie/${id}`}>
                     <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
                 </Link>
