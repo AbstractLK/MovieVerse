@@ -29,8 +29,8 @@ export const Header = () => {
 
   return (
     <div>
-      <nav className="w-full bg-white border-b-2 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-        <div className="max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-3">
+      <nav className="bg-white border-b-2 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
